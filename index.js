@@ -13,7 +13,7 @@ app.use(cors({
 
 app.use("/api",router);
 app.use("/", (req, res) => {
-    res.send("Hello World");
+    return res.send("Hello World");
 })
 app.use('/public/uploads', express.static('public/uploads'));
 
