@@ -9,8 +9,6 @@ router.get("/", (req, res) => {
     return res.send("Hello World");
 });
 
-
-
 router.get("/story/:storyId/chapter",StoryChapterController.getByStoryId);
 router.post("/story/:storyId/chapter",StoryChapterController.store);
 router.put("/story/chapter/:id",StoryChapterController.update);
