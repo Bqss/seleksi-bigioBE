@@ -9,11 +9,6 @@ router.get("/", (req, res) => {
     return res.send("Hello World");
 });
 
-router.get("/story",StoryController.getAll);
-router.get("/story/:id",StoryController.detail);
-router.post("/story",uploader.single("cover"),StoryController.store);
-router.put("/story/:id",uploader.single("cover"),StoryController.update);
-router.delete("/story/:id",StoryController.destroy);
 
 
 router.get("/story/:storyId/chapter",StoryChapterController.getByStoryId);
