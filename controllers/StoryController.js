@@ -146,6 +146,7 @@ class StoryController {
                 message: "Story updated",
             });
         } catch (error) {
+            t.rollback();
             if (error instanceof ValidationError) {
                 return res.status(400).json({
                     status: "error",
